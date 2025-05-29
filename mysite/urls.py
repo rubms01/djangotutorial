@@ -22,9 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("movies/", include("movies.urls")),
     path('', views.index),
-    path('', views.a),
-    path('', views.b),
-    path('', views.c),
-    path('', views.introduce),  
+    path('a/', views.a),
+    path('b/', views.b),
+    path('c/', views.c),
+    # path('introduce/', views.introduce),  
 
 ]

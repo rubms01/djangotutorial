@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 
 def index(request):
-    # return HttpResponse("<h1>메인 페이지입니다.</h1>")
     url = """
         <html> 
         <head>
@@ -9,9 +8,10 @@ def index(request):
         <body>
             <h1>메인 페이지입니다.</h1>
             <div>
-                <a href = "http://127.0.0.1:8000/movies">인터스텔라 페이지입니다.</a>
-                <a href = "http://127.0.0.1:8000/movies">기생충 페이지입니다.</a>
-                <a href = "http://127.0.0.1:8000/movies">토이스토리 페이지입니다.</a>
+                <a href = "http://127.0.0.1:8000/a">A 페이지입니다.</a>
+                <a href = "http://127.0.0.1:8000/b">B 페이지입니다.</a>
+                <a href = "http://127.0.0.1:8000/c">C 페이지입니다.</a>
+                <a href = "http://127.0.0.1:8000/movies">영화 소개개 페이지입니다.</a>
             </div>
         </body>
         </html>
@@ -19,14 +19,50 @@ def index(request):
     return HttpResponse(url)
 
 def a(request):
-    return HttpResponse("<h1>A페이지입니다.</h1>")
+        apage = """
+        <html> 
+        <head>
+        </head>
+        <body>
+            <h1>A 페이지입니다.</h1>
+        </body>
+        </html>
+        """
+        return HttpResponse(apage)
 
 def b(request):
-    return HttpResponse("<h1>B페이지입니다.</h1>")
-    return HttpResponse("오늘의 영화 추천")
+        bpage = """
+        <html> 
+        <head>
+        </head>
+        <body>
+            <h1>B 페이지입니다.</h1>
+        </body>
+        </html>
+        """
+        return HttpResponse(bpage)
+
 
 def c(request):
-    return HttpResponse("<h1>C페이지입니다.</h1>")
+        cpage = """
+        <html> 
+        <head>
+        </head>
+        <body>
+            <h1>C 페이지입니다.</h1>
+        </body>
+        </html>
+        """
+        return HttpResponse(cpage)
 
 def introduce(request):
-    return HttpResponse("<h1>소개 페이지입니다.</h1>")
+        introduce_page = """
+        <html> 
+        <head>
+        </head>
+        <body>
+            <h1>영화 페이지입니다.</h1>
+        </body>
+        </html>
+        """
+        return HttpResponse(introduce_page)
